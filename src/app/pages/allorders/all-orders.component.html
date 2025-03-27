@@ -1,0 +1,147 @@
+<section class="w-3/4 mx-auto rounded shadow-md bg-gray-100 p-3 mb-10 mt-20">
+    <h2 class=" text-4xl  text-gray-600 text-center pb-5 pt-10"> All orders</h2>
+    @for (order of allOrdersList; track $index) {
+
+        <div class="space-y-5">
+           
+            <div class="border p-5 mb-5">
+                <h3 class="text-lg capitalize font-semibold">Order:</h3>
+                @for (cartOrder of order.cartItems ; track $index) {
+                    <div class="flex border-b items-center py-4">
+                        <div class="w-1/6">
+                            <img class="w-full pr-4" [src]="cartOrder.product.imageCover" [alt]="cartOrder.product.title" title="cartOrder.product.title">
+                        </div>
+        
+                      
+                        <div class="w-11/12 flex justify-between">
+                            <div>
+                                <h3 class="text-sm font-semibold text-[#BB7A3E]">{{cartOrder.product.title}}</h3>
+                                <p class="capitalize mb-0">{{cartOrder.count}}</p>
+                                <p class="capitalize mb-0">Price: {{cartOrder.price}}</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+                
+
+<div class="relative overflow-x-auto">
+    <table class="w-[60%] mx-auto text-sm mt-4 text-left rtl:text-right text-gray-500 dark:text-gray-400">
+     
+        <tbody>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <p class="capitalize mb-0 p-1 text-sm">Is Delivered: </p>
+                </th>
+                <td class="px-6 py-2">
+                    <span class="text-white rounded-md font-semibold p-2" [class]=" order.isDelivered==true ? 'bg-green-500': 'bg-red-600'">{{order.isDelivered}}</span>
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <p class="capitalize mb-0 p-1 text-sm">Is Paid: 
+                </th>
+                <td class="px-6 py-2">
+                    <span class="text-white rounded-md font-semibold p-2" [class]=" order.isPaid==true ? 'bg-green-500': 'bg-red-600'">{{order.isPaid}}</span>
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <p class="capitalize mb-0 p-1 text-sm">Payment Method Type:</p>
+                </th> 
+                <td class="px-6 py-2">
+                    <span class="font-semibold text-[#BB7A3E]">{{order.paymentMethodType}}</span>
+                </td>
+
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <p class="capitalize mb-0 p-1 text-sm">paidAt: </p>
+                </th> 
+                <td class="px-6 py-2">
+                    <span class="font-semibold text-[#BB7A3E]">{{order.paidAt}}</span>
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <p class="capitalize mb-0 p-1 text-sm">UpDateAt:</p>
+                </th> 
+                <td class="px-6 py-2">
+                    <span class="font-semibold text-[#BB7A3E]">{{order.updatedAt}}</span>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="font-semibold text-gray-900 dark:text-white">
+                <th scope="row" class="px-6 py-1 text-base"><p class="capitalize mb-0 p-1 text-sm">Total Order Price:</p></th>
+                <!-- <td class="px-6 py-3">3</td> -->
+                <td class="px-6 py-3"><span class="font-semibold text-[#BB7A3E]">{{order.totalOrderPrice}}</span></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+                   <!-- <div class="py-3 w-3/4 mx-auto space-y-1 text-center">
+                    <p class="capitalize mb-0 p-1 text-sm">Is Delivered: 
+                        <span class="text-white rounded-md font-semibold p-1" [class]=" order.isDelivered==true ? 'bg-green-500': 'bg-red-600'">{{order.isDelivered}}</span>
+                    </p>
+                    <p class="capitalize mb-0 p-1 text-sm">Is Paid: 
+                        <span class="text-white rounded-md font-semibold p-1" [class]=" order.isPaid==true ? 'bg-green-500': 'bg-red-600'">{{order.isPaid}}</span>
+                    </p>
+                    <p class="capitalize mb-0 p-1 text-sm">Payment Method Type: <span class="font-semibold text-[#BB7A3E]">{{order.paymentMethodType}}</span></p>
+                    <p class="capitalize mb-0 p-1 text-sm">paidAt: <span class="font-semibold text-[#BB7A3E]">{{order.paidAt}}</span></p>
+                    <p class="capitalize mb-0 p-1 text-sm">UpDateAt: <span class="font-semibold text-[#BB7A3E]">{{order.updatedAt}}</span></p>
+                    <p class="capitalize mb-0 p-1 text-sm">Total Order Price: <span class="font-semibold text-[#BB7A3E]">{{order.totalOrderPrice}}</span></p>
+                </div> -->
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    }
+  
+</section>

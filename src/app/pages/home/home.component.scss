@@ -1,0 +1,42 @@
+
+.back {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;  
+    background-image: linear-gradient(rgb(0,0,0,.5),rgb(0,0,0,.5)),url('/images/Whatsdfghj.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+.sect{
+    min-height: 80vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;  
+    // text-align: center;  
+    background-image: linear-gradient(rgb(0,0,0,.5),rgb(0,0,0,.5)),url('/images/fashion.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.card{
+
+        transition: all 0.8s;
+    .btn{
+        transform:translateY(100%) ;
+        transition: all 0.7s;
+        opacity: 0;
+    }&:hover{
+        button{
+            transform: translateY(0);
+            opacity: 1;
+        }
+      
+    }
+}

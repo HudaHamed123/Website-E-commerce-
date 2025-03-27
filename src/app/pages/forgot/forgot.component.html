@@ -1,0 +1,53 @@
+
+<section class="flex justify-center items-center py-24 mt-16 signbg bg-gradient-to-r from-[#C76A2E] via-[#f39345] to-[#C76A2E]">
+    <div class=" w-[500px] mx-auto h-[500px] rounded-3xl shadow-lg   bg-white/30  rodtion">
+      <div class=" flex items-center justify-center">
+        <img src="/images/WhatsApp Image 2025-03-04 at 23.04.19_4c356ee1.jpg" alt="" width="150px" class="rounded-full -m-[70px] " srcset="">
+      </div>
+      <h1 class=" text-gray-900 pt-[100px] pb-5  text-center text-3xl fonnt"> forgot PassWord Now</h1>
+@if (step==1) {
+    <form [formGroup]="verifyEmail" class="max-w-md mx-auto" (ngSubmit)="verifyEmailSumbit()">
+    
+        <div class="relative mb-4 px-10">
+          <input formControlName="email" type="email" id="input-group-1"  class="bg-gray-50 border border-[#BB7A3E] text-gray-900 text-sm rounded-lg focus:ring-[#BB7A3E] focus:border-[#BB7A3E] block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#BB7A3E] dark:focus:border-[#BB7A3E]" placeholder="Your Email@gmail.com :">
+        </div>
+        <button [disabled]="verifyEmail.invalid" class="text-white bg-gradient-to-r from-[#C76A2E] via-[#f39345] to-[#C76A2E] hover:bg-gradient-to-br  focus:outline-none  font-medium rounded-xl text-sm px-[50px] py-3 text-center block  mx-auto mt-4 ">
+          @if (isLoading) {
+              <span><i class="fas fa-spin fa-spinner"></i></span> 
+          }
+          verify Email</button>
+    </form>
+}
+
+@else if (step==2) {
+    <form [formGroup]="verifyCode" class="max-w-md mx-auto"  (ngSubmit)="verifyCodeSumbit()">
+    
+        <div class="relative mb-4 px-10">
+          <input formControlName="resetCode" type="email" id="input-group-1"  class="bg-gray-50 border border-[#BB7A3E] text-gray-900 text-sm rounded-lg focus:ring-[#BB7A3E] focus:border-[#BB7A3E] block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#BB7A3E] dark:focus:border-[#BB7A3E]" placeholder="resetCode">
+          <button [disabled]="verifyCode.invalid" class="text-white bg-gradient-to-r from-[#C76A2E] via-[#f39345] to-[#C76A2E] hover:bg-gradient-to-br  focus:outline-none  font-medium rounded-xl text-sm px-[50px] py-3 text-center block  mx-auto mt-4 ">
+            @if (isLoading) {
+                <span><i class="fas fa-spin fa-spinner"></i></span> 
+            }
+        
+            reset Code</button>
+        </div>
+    </form>
+}
+@else if (step==3) {
+    
+<form [formGroup]="resetPassword" class="max-w-md mx-auto" (ngSubmit)="resetPasswordSumbit()" >
+    
+    <div class="relative mb-4 px-10">
+      <input formControlName="email" readonly type="email" id="input-group-1"  class="bg-gray-50 border border-[#BB7A3E] text-gray-900 text-sm rounded-lg focus:ring-[#BB7A3E] focus:border-[#BB7A3E] block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#BB7A3E] dark:focus:border-[#BB7A3E]" placeholder="Your Email@gmail.com :">
+      <input formControlName="newPassword" type="password" id="input-group-1"  class="bg-gray-50 border border-[#BB7A3E] text-gray-900 text-sm rounded-lg focus:ring-[#BB7A3E] focus:border-[#BB7A3E] block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#BB7A3E] dark:focus:border-[#dc7633]" placeholder="resetPassword">
+      <button [disabled]="resetPassword.invalid" class="text-white bg-gradient-to-r from-[#C76A2E] via-[#f39345] to-[#C76A2E] hover:bg-gradient-to-br  focus:outline-none  font-medium rounded-xl text-sm px-[50px] py-3 text-center block  mx-auto mt-4 ">
+        @if (isLoading) {
+            <span><i class="fas fa-spin fa-spinner"></i></span> 
+        }
+        verify Email</button>
+    </div>
+</form>
+}
+  </div>
+  
+</section>

@@ -1,0 +1,74 @@
+<section class="flex justify-center items-center py-24 mt-16  signbg">
+  <div class=" w-[500px] mx-auto h-screen rounded-3xl shadow-lg   bg-white/30  rodtion">
+  <div class=" flex items-center justify-center">
+    <img src="/images/WhatsApp Image 2025-03-04 at 23.04.19_4c356ee1.jpg" alt="" width="150px" class="rounded-full -m-[70px] " srcset="">
+  </div>
+  <h1 class=" text-gray-900 pt-[100px] pb-5  text-center text-3xl fonnt"> CheckOut</h1>
+    <form [formGroup]="checkOutForm" class="" (ngSubmit)="submitForm()">
+        <div class=" mx-5">
+            <label for="details" class="block mb-2 text-md font-medium text-gray-700 dark:text-white">details</label>
+          <textarea formControlName="details"  id="details"  class="bg-gray-50 border border-[#BB7A3E] w-full text-gray-900 text-sm rounded-lg focus:ring-[#BB7A3E] focus:border-[#BB7A3E] block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#BB7A3E] dark:focus:border-[#BB7A3E]"></textarea>
+          @if (checkOutForm.get('details')?.errors  && checkOutForm.get('details')?.touched){
+            <div class="flex p-2 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+                <svg class="shrink-0 inline w-4 h-4 me-3 mt-[2px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                </svg>
+                <span class="sr-only">Danger</span>
+                <div>         
+                  <ul class="mt-1.5 list-disc list-inside">
+                    @if (checkOutForm.get('details')?.getError('required')) {
+                        <li>details is required</li>
+                    }
+              </ul>
+                </div>
+              </div>
+          }
+        </div>
+
+        <div class=" mx-5">
+            <label for="phone" class="block mb-2 text-md font-medium text-gray-700 dark:text-white">phone</label>
+          <input formControlName="phone" type="tel" id="phone"  class="bg-gray-50 border border-[#BB7A3E] w-full text-gray-900 text-sm rounded-lg focus:ring-[#BB7A3E] focus:border-[#BB7A3E] block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#BB7A3E] dark:focus:border-[#BB7A3E]">
+          @if (checkOutForm.get('phone')?.errors && checkOutForm.get('phone')?.touched){
+            <div class="flex p-2 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+                <svg class="shrink-0 inline w-4 h-4 me-3 mt-[2px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                </svg>
+                <span class="sr-only">Danger</span>
+                <div>         
+                  <ul class="mt-1.5 list-disc list-inside">
+                    @if (checkOutForm.get('phone')?.getError('required')) {
+                        <li>phone is required</li>
+                    }@else if (checkOutForm.get('phone')?.getError('pattern')) {
+                    <li>inter valid phone</li>
+                    }
+              </ul>
+                </div>
+              </div>
+          }
+        </div>
+        <div class=" mx-5">
+            <label for="city" class="block mb-2 text-md font-medium text-gray-700 dark:text-white">city</label>
+          <input formControlName="city" type="text"  id="city"  class="bg-gray-50 border border-[#BB7A3E] w-full text-gray-900 text-sm rounded-lg focus:ring-[#BB7A3E] focus:border-[#dc7633] block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#dc7633] dark:focus:border-[#dc7633]">
+          @if (checkOutForm.get('city')?.errors  && checkOutForm.get('city')?.touched){
+            <div class="flex p-2 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+                <svg class="shrink-0 inline w-4 h-4 me-3 mt-[2px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                </svg>
+                <span class="sr-only">Danger</span>
+                <div>         
+                  <ul class="mt-1.5 list-disc list-inside">
+                    @if (checkOutForm.get('city')?.getError('required')) {
+                        <li>city is required</li>
+                    }
+              </ul>
+                </div>
+              </div>
+          }
+        </div>
+        <button  [disabled]="checkOutForm.invalid" type="submit" class="text-white bg-gradient-to-r from-[#C76A2E] via-[#f39345] to-[#C76A2E] hover:bg-gradient-to-br  focus:outline-none  font-medium rounded-xl text-sm px-[50px] py-3 text-center block  mx-auto mt-4 ">
+       
+          verify Email</button>
+ 
+    </form>
+  </div>
+</section>

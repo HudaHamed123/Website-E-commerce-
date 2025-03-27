@@ -1,0 +1,447 @@
+<!-- <nav class="bg-white shadow-lg border-gray-200 dark:bg-gray-900 fixed top-0 left-0 w-full z-50">
+    <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
+    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="/images/logo.jpg" class="h-12 me-2 w-[150px]" alt="Flowbite Logo" />
+    </a>
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+  <div
+    class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto py-2 px-4"
+  >
+    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="/images/logo 23.jpg" class="h-12 me-2 w-[130px]" alt="Flowbite Logo" />
+    </a>
+    <button
+      data-collapse-toggle="navbar-default"
+      type="button"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+      aria-controls="navbar-default"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Open main menu</span>
+      <svg
+        class="w-5 h-5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"
+        />
+      </svg>
+    </button>
+    <div class="hidden flex-grow w-full md:flex md:w-auto" id="navbar-default">
+      @if (isLogin()) {
+      <ul
+        class="flex items-center flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <li>
+          <a
+            routerLink="/home"
+            routerLinkActive=" text-white bg-[#dc7633] rounded-xl px-3"
+            class="capitalize block py-2 px-3 font-medium text-[#dc7633] rounded-sm"
+            aria-current="page"
+            >home</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/products"
+            routerLinkActive="text-white bg-[#dc7633] rounded-xl px-3"
+            class="block py-2 px-3 text-[#dc7633] font-medium rounded-sm"
+            aria-current="page"
+            >products</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/cart"
+            routerLinkActive="text-white bg-[#dc7633]  rounded-xl px-3"
+            class="capitalize block py-2 px-3 text-[#dc7633] font-medium rounded-sm"
+            aria-current="page"
+            >Cart</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/categories"
+            routerLinkActive="text-white bg-[#dc7633]  rounded-xl px-3"
+            class="capitalize block py-2 px-3 text-[#dc7633] font-medium rounded-sm"
+            aria-current="page"
+            >categories</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/wishList"
+            routerLinkActive="text-white bg-[#dc7633]  rounded-xl px-3"
+            class="capitalize block py-2 px-3 text-[#dc7633] font-medium rounded-sm"
+            aria-current="page"
+            >WishList</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/brands"
+            routerLinkActive=" text-white bg-[#dc7633]  rounded-xl px-3"
+            class="capitalize block py-2 px-3 text-[#dc7633] font-medium rounded-sm"
+            aria-current="page"
+            >brands</a
+          >
+        </li>
+
+      </ul>
+      }
+      <ul
+        class="flex items-center flex-col ms-auto p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-2 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <li>
+          <a
+            href="#"
+            class="text-gray-600 block hover:text-[#dc7633] py-2"
+            aria-current="page"
+          >
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-600 block hover:text-[#dc7633] py-2"
+            aria-current="page"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-600 block hover:text-[#dc7633] py-2"
+            aria-current="page"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-600 block hover:text-[#dc7633] py-2"
+            aria-current="page"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+      
+        @if (!isLogin()) {
+        <li>
+          <a
+            routerLink="/login"
+            class="border border-[#dc7633] text-[#dc7633] hover:bg-[#dc7633] hover:text-white py-2 px-3 capitalize block text-gray-700 rounded-xl"
+            aria-current="page"
+            >LogIn</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/register"
+            class="border border-[#dc7633] text-[#dc7633] hover:bg-[#dc7633] hover:text-white py-2 px-3 capitalize block text-gray-700 rounded-xl"
+            aria-current="page"
+            >Register</a
+          >
+        </li>
+        }@else {
+      
+        <li>
+          <a
+            routerLink="/cart"
+            routerLinkActive="text-[#dc7633]  rounded-xl"
+            class=" text-3xl block py-2 px-2 text-[#dc7633] font-medium rounded-sm relative"
+            aria-current="page"
+            >
+            <i class=" fas fa-cart-shopping"></i>
+            <span class=" bg-[#dc7633] text-white absolute top-0 end-0 rounded-md text-sm ml-2 px-[6px] py-[1px]">{{cartNumber}}</span>
+            </a
+          >
+        </li>
+        <li>
+          <a
+            role="button"
+            class="border border-[#dc7633] text-[#dc7633] hover:bg-[#dc7633] hover:text-white py-2 px-3 capitalize block text-gray-700 rounded-xl"
+            aria-current="page"
+            (click)="logout()"
+            >LogOut</a
+          >
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<nav [ngClass]="{
+  'bg-transparent text-white': isHomeNavbar && isTransparent,
+  'bg-white/90 text-[#BB7A3E]': !isHomeNavbar || !isTransparent
+}" 
+class="fixed top-0 w-full z-50 transition-all duration-300">
+
+
+
+
+
+    <div
+      class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 py-3"
+    >
+      <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <!-- <img src="/images/logo.jpg" class="h-12 me-2 w-[150px]" alt="Flowbite Logo" /> -->
+         <h1 class=" text-2xl text-[#BB7A3E] font-bold px-2">Ecomora</h1>
+      </a>
+      <button
+        data-collapse-toggle="navbar-default"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"
+          />
+        </svg>
+      </button>
+      <div class="hidden flex-grow w-full md:flex md:w-auto" id="navbar-default">
+        @if (isLogin()) {
+        <ul
+          class="flex items-center  mx-auto flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row   md:space-x-4 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+        >
+        <a routerLink="/home"
+        routerLinkActive="bg-[#BB7A3E] rounded-xl px-3"
+        [ngClass]="{'text-white': isTransparent || isActiveRoute('/home'), 'text-[#BB7A3E]': !isTransparent && !isActiveRoute('/home')}"
+        class="capitalize block py-2 px-3 font-semibold rounded-sm">
+        home
+     </a>
+     
+
+          <li>
+            <a
+              routerLink="/products"
+              routerLinkActive=" bg-[#BB7A3E] text-white rounded-xl px-3"
+              class="block py-2 px-3 text-[#BB7A3E] font-medium rounded-sm"
+              aria-current="page"
+              >products</a
+            >
+          </li>
+          
+          <li>
+            <a
+              routerLink="/cart"
+              routerLinkActive="bg-[#BB7A3E] text-white  rounded-xl px-3"
+              class="capitalize block py-2 px-3 text-[#BB7A3E] font-medium rounded-sm"
+              aria-current="page"
+              >Cart</a
+            >
+          </li>
+     
+          <li>
+            <a
+              routerLink="/categories"
+              routerLinkActive=" bg-[#BB7A3E] text-white  rounded-xl px-3"
+              class="capitalize block py-2 px-3 text-[#BB7A3E] font-medium rounded-sm"
+              aria-current="page"
+              >categories</a
+            >
+          </li>
+          
+          <li>
+            <a
+              routerLink="/wishList"
+              routerLinkActive=" bg-[#BB7A3E]  text-white rounded-xl px-3"
+              class="capitalize block py-2 px-3 text-[#BB7A3E] font-medium rounded-sm"
+              aria-current="page"
+              >WishList</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/brands"
+              routerLinkActive=" bg-[#BB7A3E] text-white  rounded-xl px-3"
+              class="capitalize block py-2 px-3 text-[#BB7A3E] font-medium rounded-sm"
+              aria-current="page"
+              >brands</a
+            >
+          </li>
+  
+        </ul>
+        }
+        <ul
+        class="flex items-center flex-col ms-auto p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-2 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        @if (!isLogin()) {
+        <li>
+          <a
+            routerLink="/login"
+            class="border border-[#BB7A3E] text-[#BB7A3E] hover:bg-[#BB7A3E] hover:text-white py-2 px-3 capitalize block text-gray-700 rounded-xl"
+            aria-current="page"
+            >LogIn</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/register"
+            class="border border-[#BB7A3E] text-[#BB7A3E] hover:bg-[#BB7A3E] hover:text-white py-2 px-3 capitalize block text-gray-700 rounded-xl"
+            aria-current="page"
+            >Register</a
+          >
+        </li>
+        }@else {
+          <li>
+            <a
+              routerLink="/wishList"
+              routerLinkActive="text-[#BB7A3E]  rounded-xl"
+              class=" text-3xl block py-2 text-[#BB7A3E] font-medium rounded-sm"
+              aria-current="page"
+              >
+              <i class=" fas fa-heart text-[#BB7A3E]"></i>
+              </a
+            >
+          </li>
+      
+        <li>
+          <a
+            routerLink="/cart"
+            routerLinkActive="text-[#BB7A3E]  rounded-xl"
+            class=" text-3xl block py-2 px-2  font-medium rounded-sm relative"
+            aria-current="page"
+            >
+            <i class=" fas fa-cart-shopping"></i>
+            <span class=" bg-[#BB7A3E] text-white absolute top-0 end-0 rounded-xl text-sm ml-2 px-[6px] py-[1px]">{{cartNumber}}</span>
+            </a
+          >
+        </li>
+        <li>
+          <a
+            role="button"
+            class="border border-[#BB7A3E] text-[#BB7A3E] hover:bg-[#BB7A3E] hover:text-white py-2 px-3 capitalize block  rounded-full"
+            aria-current="page"
+            (click)="logout()"
+            ><i class="fa-solid fa-user text-2xl "></i></a
+          >
+        </li>
+        }
+      </ul>
+  
+        <!-- <ul
+          class="flex items-center flex-col ms-auto p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-2 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+        >
+          <li>
+            <a
+              href="#"
+              class="text-gray-600 block hover:text-[#BB7A3E] py-2"
+              aria-current="page"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-600 block hover:text-[#BB7A3E] py-2"
+              aria-current="page"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-600 block hover:text-[#BB7A3E] py-2"
+              aria-current="page"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-600 block hover:text-[#BB7A3E] py-2"
+              aria-current="page"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          @if (!isLogin()) {
+          <li>
+            <a
+              routerLink="/login"
+              class="border border-[#BB7A3E] text-[#BB7A3E] hover:bg-[#dc7633] hover:text-white py-2 px-3 capitalize block text-gray-700 rounded-xl"
+              aria-current="page"
+              >LogIn</a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/register"
+              class="border border-[#dc7633] text-[#dc7633] hover:bg-[#dc7633] hover:text-white py-2 px-3 capitalize block text-gray-700 rounded-xl"
+              aria-current="page"
+              >Register</a
+            >
+          </li>
+          }@else {
+                 <li>
+            <a
+              routerLink="/wishList"
+              routerLinkActive="text-[#dc7633]  rounded-xl"
+              class=" text-3xl block py-2 text-[#dc7633] font-medium rounded-sm"
+              aria-current="page"
+              >
+              <i class=" fas fa-heart text-red-500"></i>
+              </a
+            >
+          </li>
+          <li>
+            <a
+              routerLink="/cart"
+              routerLinkActive="text-[#dc7633]  rounded-xl"
+              class=" text-3xl block py-2 px-2 text-[#dc7633] font-medium rounded-sm"
+              aria-current="page"
+              >
+              <i class=" fas fa-cart-shopping"></i>
+              </a
+            >
+          </li>
+          <li>
+            <a
+              role="button"
+              class="border border-[#dc7633] text-[#dc7633] hover:bg-[#dc7633] hover:text-white py-2 px-3 capitalize block text-gray-700 rounded-xl"
+              aria-current="page"
+              (click)="logout()"
+              >LogOut</a
+            >
+          </li>
+          }
+        </ul> -->
+      </div>
+    </div>
+  </nav>
+<!-- </nav> -->
+

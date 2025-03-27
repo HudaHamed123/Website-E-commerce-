@@ -1,0 +1,186 @@
+
+<section class="pb-8 bg-[#F6F6F6] hero-section">
+    <div class="back">
+        <div class="text-white cent">
+            <h1 class="text-4xl md:text-6xl font-bold">Refresh Your Wardrobe</h1>
+            <p class="text-lg md:text-2xl mt-4 mb-2">Enjoy discounts of up to 50%</p>
+                <span class=" md:text-md font-semibold"> on all clothing and accessories</span> 
+               
+            <a href="#" class="mt-4 inline-block flex justify-center items-center pl-[90px]">
+           <div class=" text-center ">
+            <img src="/images/E-Commerce_files/right-down.png" alt="Shop Now" class=" m-3 w-[90px] transition transform hover:scale-105">
+          </div>           
+          <div class=" pt-16 text-center">  <button 
+             class=" mt-6 px-3 py-2 text-center bg-[#BB7A3E] rounded-xl">Shopping Now</button></div>
+            </a>
+          </div>
+     
+     
+       
+      
+    </div>
+    <!-- <div class=" grid md:grid-cols-[70%_minmax(0,1fr)]">
+        <div class=" overflow-hidden">
+            <owl-carousel-o [options]="customMainSlider">
+                <ng-template carouselSlide><img src="/images/img1.avif" class="w-full h-[300px]" alt=""></ng-template>  
+                <ng-template carouselSlide><img src="/images/img2.avif" class="w-full h-[300px]" alt=""></ng-template>  
+                <ng-template carouselSlide><img src="/images/img3.avif" class="w-full h-[300px]" alt=""></ng-template>
+                <ng-template carouselSlide><img src="/images/img4.avif" class="w-full h-[300px]" alt=""></ng-template>  
+                <ng-template carouselSlide><img src="/images/img5.avif" class="w-full h-[300px]" alt=""></ng-template> 
+                <ng-template carouselSlide><img src="/images/img6.avif" class="w-full h-[300px]" alt=""></ng-template> 
+                <ng-template carouselSlide><img src="/images/WhatsApp Image 2025-03-21 at 20.49.25_41fb104a.jpg" class="w-full h-[300px]" alt=""></ng-template> 
+                <ng-template carouselSlide><img src="/images/slider-image-3.jpeg" class="w-full h-[300px]" alt=""></ng-template>  
+              </owl-carousel-o>
+        </div>
+       
+        <div>
+            <img src="/images/grocery-banner.png" class="w-full h-[150px]" alt="">
+            <img src="/images/grocery-banner-2.jpeg" class="w-full h-[150px]" alt="">
+        </div>
+
+    </div> -->
+</section> 
+<section class="bg-[#F6F6F6] py-6">
+    <!-- <h2 class="pt-4 text-center mb-4 text-4xl pb-2 text-gray-600">Popular categories</h2> -->
+    <h2 class="pt-4 text-center mb-4 text-4xl pb-2 text-[#BB7A3E] font-bold">Categories</h2>
+    
+    <owl-carousel-o [options]="customOptions">
+        @for (cate of categories; track cate._id) {
+          <ng-template carouselSlide >
+              <div>
+                  <img [src]="cate.image" class=" w-[200px] h-[200px] circle overflow-hidden border-1 border-gray-300 shadow-lg" alt="">
+                  <h3 class=" text-[#BB7A3E] font-bold text-center">{{cate.name}}</h3>
+              </div>
+          </ng-template>
+        }
+          </owl-carousel-o>
+</section>
+<section class="bg-[#F6F6F6]">
+        <div class="sect">
+            <div class="text-white cent">
+                <h1 class="text-4xl md:text-6xl font-bold">Refresh Your Wardrobe</h1>
+                <p class="text-lg md:text-2xl mt-4 mb-2">Enjoy discounts of up to 50%</p>
+                    <span class=" md:text-md font-semibold"> on all clothing and accessories</span> 
+    </div>
+        </div>
+</section>
+<section class="py-20 bg-[#F6F6F6]">
+    <h2 class="text-center text-4xl text-[#BB7A3E] font-bold">New Collection</h2>
+    <h3 class="text-2xl font-medium text-center text-gray-600 pt-6 pb-12">
+        New Collection Enjoy the latest designs with amazing offers for a limited time!
+    </h3>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 px-6 md:px-20">
+        <div class="relative card rounded-2xl overflow-hidden h-[400px] md:mt-11 hover:shadow-md hover:shadow-gray-700">
+            <img src="/images/choloes.jpg" class="absolute inset-0 w-full h-full object-cover" alt="">
+            <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white text-center">
+                <h3 class="text-2xl font-bold">Clothes</h3>
+                <p class="text-md">UP TO 50% OFF</p>
+            </div>
+        </div>
+        <div class="relative card rounded-2xl overflow-hidden h-[500px] hover:shadow-md hover:shadow-gray-700">
+            <img src="/images/ecssewarat.jpg" class="absolute inset-0 w-full h-full object-cover" alt="">
+            <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white text-center">
+                <h3 class="text-2xl font-bold">Accessories</h3>
+                <p class="text-md">UP TO 50% OFF</p>
+            </div>
+        </div>
+        <div class="relative card rounded-2xl overflow-hidden h-[400px] md:mt-11 hover:shadow-md hover:shadow-gray-700">
+            <img src="/images/shosess.jpg" class="absolute inset-0 w-full h-full object-cover" alt="">
+            <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white text-center">
+                <h3 class="text-2xl font-bold">Shoes</h3>
+                <p class="text-md">UP TO 50% OFF</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class=" pb-16 px-16 bg-[#F6F6F6]">
+    <h2 class=" text-4xl font-bold  text-[#BB7A3E]  text-center py-5">Products</h2>
+    <h3 class=" text-center font-medium text-2xl text-gray-600 ">Best Offers On Products</h3>
+    <div class="relative w-1/2 mx-auto my-8">
+        <div class="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+        </div>
+        <input 
+            [(ngModel)]="iteams"
+            type="search"
+            class="bg-gray-50 border border-[#BB7A3E] text-gray-900 text-md rounded-xl focus:ring-[#BB7A3E] focus:border-[#BB7A3E] block w-full p-2.5 pl-10 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#BB7A3E] dark:focus:border-[#BB7A3E]" 
+            placeholder="Search For The Product...">
+    </div>
+    
+       <!-- <div class="relative">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+        </div>
+     
+    <input 
+    [(ngModel)]="iteams"
+     type="search" class="bg-gray-50 border border-[#BB7A3E] text-gray-900 text-sm rounded-xl focus:ring-[#BB7A3E] focus:border-[#BB7A3E] block mx-auto w-1/2 p-2.5 my-8  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#BB7A3E] dark:focus:border-[#BB7A3E]" placeholder="search:...">
+    </div> -->
+    <div class=" grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10">
+       
+       @for (prod of products.slice(0,12) |search:iteams; track $index) {
+      
+        <div class="card border border-[#BB7A3E] bg-gray-50 rounded-xl overflow-hidden shadow relative hover:shadow-md hover:shadow-[#BB7A3E]">
+            <div [routerLink]="['/details' , prod._id]" routerLinkActive="router-link-active" >
+                <div class="card-img">
+                    <img [src]="prod.imageCover" class=" w-full h-[250px] object-contain" alt="">
+                    <button class=" font-bold mx-2 w-[60px] h-[30px] rounded-md bg-[#BB7A3E] text-white">-50%</button>
+                </div>
+                <div class="card-body px-2 py-4">
+                    <h4 class=" text-[#BB7A3E] text-xs">{{prod.category.name}}</h4>
+                    <h3 class=" font-medium text-gray-600">{{prod.title.split(' ',2).join(' ')}}</h3>
+                    <div class=" flex justify-between items-center text-gray-600">
+                        <span>{{prod.price}} EGP</span>
+                        <div class="flex items-center">
+                          
+                            @for (star of getFullStars(prod.ratingsAverage); track $index) {
+                                <i class="fas fa-star text-yellow-400"></i>
+                            }
+                        
+                         
+                            @if (hasHalfStar(prod.ratingsAverage)) {
+                                <i class="fas fa-star-half-alt text-yellow-400"></i>
+                            }
+                        
+                     
+                            @for (star of getEmptyStars(prod.ratingsAverage); track $index) {
+                                <i class="far fa-star text-yellow-400"></i>
+                            }
+                        
+                          
+                            <span class="text-gray-500 ps-1">{{ prod.ratingsAverage }}</span>
+                        </div>
+                        
+    
+                    </div>
+    <div class=" text-[#BB7A3E] font-medium cursor-pointer">
+        <p>See more Details >></p>
+    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center">
+                <button  (click)="addToCart(prod.id)" class=" btn ml-3 mb-2 mx-auto bg-[#BB7A3E] w-[70%] rounded-xl block py-1">
+                  + Add To Cart
+                </button>
+                @if(!wishList.includes(prod.id)){
+                    <i (click)="addToWishlist(prod.id)" class="fa-solid fa-heart text-3xl mb-2  text-gray-800  pr-2 cursor-pointer">
+                    </i>
+                }
+                @if(wishList.includes(prod.id)){
+                    <i (click)="removeFromWishlist(prod.id)" class="fa-solid fa-heart text-[#BB7A3E] mb-2 text-3xl pr-2 cursor-pointer">
+                    </i>
+                }
+              
+               
+              </div>
+            
+            
+        </div>
+       }
+    </div>
+</section>

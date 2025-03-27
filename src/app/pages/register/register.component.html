@@ -1,0 +1,170 @@
+<section class="flex justify-center items-center py-24 mt-16  signbg">
+    <div class=" w-[500px] mx-auto h-[800px] rounded-3xl shadow-lg   bg-white/30  rodtion">
+      <div class=" flex items-center justify-center">
+        <img src="/images/WhatsApp Image 2025-03-04 at 23.04.19_4c356ee1.jpg" alt="" width="150px" class="rounded-full -m-[70px] " srcset="">
+      </div>
+      <h1 class="text-gray-700 pt-[100px] pb-5  text-center text-3xl fonnt"> Create a Account</h1>
+      <p class="pb-4  text-center text-gray-500">Create a new account</p>
+  <form [formGroup]="registerForm" (submit)="submitForm()"   class="max-w-md mx-auto">
+    <div class="relative mb-4 px-10">
+        @let nameControl=registerForm.get('name');
+      <!-- <div class="absolute inset-y-0 start-0 flex items-center ps-12 pointer-events-none">
+        <span class="w-4 h-4 text-gray-500  justify-center items-center  flex dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+          <i class="fa-solid fa-user"></i>
+        </span>
+      </div> -->
+    
+      <input  formControlName="name" type="text" id="input-group-1" class="bg-gray-50 border border-[#BB7A3E] text-gray-900 text-sm rounded-lg focus:ring-[#BB7A3E] focus:border-[#BB7A3E] block w-full  p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#BB7A3E] dark:focus:border-[#BB7A3E]" placeholder="Your Name :">
+      @if (nameControl?.errors && nameControl?.touched){
+        <div class="flex p-2 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <svg class="shrink-0 inline w-4 h-4 me-3 mt-[2px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+            </svg>
+            <span class="sr-only">Danger</span>
+            <div>
+                <ul class=" list-disc list-inside">
+                    @if (nameControl?.getError('required')) {
+                        <li>name is required</li>
+                    }@else if (nameControl?.getError('minlength')) {
+                        <li>name minLength : 3</li>
+                    }@else if (nameControl?.getError('maxlength')) {
+                        <li>name maxlength : 20</li>
+                    }
+                
+                 
+                 
+              </ul>
+            </div>
+          </div>
+      }
+    </div>
+    <div class="relative mb-4 px-10">
+        @let EmailControl = registerForm.get('email');
+      <!-- <div class="absolute inset-y-0 start-0 flex items-center ps-12 pointer-events-none">
+        <span class="w-4 h-4 text-gray-500  justify-center items-center  flex dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+          <i class="fa-solid fa-envelope"></i>
+        </span>
+      </div> -->
+    
+      <input formControlName="email" type="email" id="input-group-1"  class="bg-gray-50 border border-[#BB7A3E] text-gray-900 text-sm rounded-lg focus:ring-[#BB7A3E] focus:border-[#BB7A3E] block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#BB7A3E] dark:focus:border-[#BB7A3E]" placeholder="Your Email@gmail.com :">
+      @if ( EmailControl ?.errors && EmailControl?.touched){
+        <div class="flex p-2 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <svg class="shrink-0 inline w-4 h-4 me-3 mt-[2px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+            </svg>
+            <span class="sr-only">Danger</span>
+            <div>
+                <ul class="mt-1.5 list-disc list-inside">
+                    @if (EmailControl?.getError('required')) {
+                        <li>Email is required</li>
+                    }@else if (EmailControl?.getError('email')) {
+                    <li>inter valid Email</li>
+                    }
+                 
+                 
+              </ul>
+            </div>
+          </div>
+      }
+    </div>
+    <div class="relative mb-4 px-10">
+        @let passWordControl = registerForm.get('password');
+      <!-- <div class="absolute inset-y-0 start-0 flex items-center ps-12 pointer-events-none">
+        <span class="w-4 h-4 text-gray-500  justify-center items-center  flex dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+          <i class="fa-solid fa-lock"></i>
+        </span>
+    </div> -->
+   
+    <input formControlName="password" type="password" id="input-group-1" class="bg-gray-50 border border-[#BB7A3E] text-gray-900 text-sm rounded-lg focus:ring-[#BB7A3E] focus:border-[#BB7A3E] block w-full  p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#BB7A3E] dark:focus:border-[#BB7A3E]" placeholder="Password :">
+    @if (passWordControl?.errors && passWordControl?.touched){
+        <div class="flex p-2 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <svg class="shrink-0 inline w-4 h-4 me-3 mt-[2px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+            </svg>
+            <span class="sr-only">Danger</span>
+            <div>         
+                <ul class="mt-1.5 list-disc list-inside">
+                    @if (passWordControl?.getError('required')) {
+                        <li>passWord is required</li>
+                    }@else if (passWordControl?.getError('pattern')) {
+                    <li>inter valid password</li>
+                    }
+              </ul>
+            </div>
+          </div>
+      }
+  </div>
+  <div class="relative mb-4 px-10">
+    <input formControlName="rePassword" type="password" id="input-group-1" class="bg-gray-50 border border-[#BB7A3E] text-gray-900 text-sm rounded-lg focus:ring-[#BB7A3E] focus:border-[#BB7A3E] block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#BB7A3E] dark:focus:border-[#BB7A3E]" placeholder="RePassword :">
+    @if (registerForm.getError('mismatch') && registerForm.get('rePassword')?.touched){
+        <div class="flex p-2 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <svg class="shrink-0 inline w-4 h-4 me-3 mt-[2px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+            </svg>
+            <span class="sr-only">Danger</span>
+            <div>         
+                <ul class="mt-1.5 list-disc list-inside">
+                    <li>password confirmation is incorrect</li>
+              </ul>
+            </div>
+          </div>
+      }
+  </div>
+  <div class="relative mb-4 px-10">
+    @let phoneControl = registerForm.get('phone');
+    <!-- <div class="absolute inset-y-0 start-0 flex items-center ps-12 pointer-events-none">
+      <span class="w-4 h-4 text-gray-500  justify-center items-center  flex dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+        <i class="fa-solid fa-phone"></i>
+      </span>
+    </div> -->
+  
+    <input formControlName="phone" type="tel" id="input-group-1" class="bg-gray-50 border border-[#BB7A3E] text-gray-900 text-sm rounded-lg focus:ring-[#BB7A3E] focus:border-[#BB7A3E] block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#BB7A3E] dark:focus:border-[#BB7A3E]" placeholder="Your phone:">
+    @if (phoneControl?.errors && phoneControl?.touched){
+        <div class="flex p-2 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+            <svg class="shrink-0 inline w-4 h-4 me-3 mt-[2px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+            </svg>
+            <span class="sr-only">Danger</span>
+            <div>
+                <ul class="mt-1.5 list-disc list-inside">
+                    @if (phoneControl?.getError('required')) {
+                        <li>phone is required</li>
+                    }@else if (phoneControl?.getError('pattern')) {
+                    <li>inter valid phone</li>
+                    }
+              </ul>
+            </div>
+          </div>
+      }
+
+
+      <button [disabled]="isLoading" type="submit" class="text-gray-600 w-full  bg-gradient-to-r from-[#C76A2E] via-[#f39345] to-[#C76A2E] hover:bg-gradient-to-br  focus:outline-none  font-medium rounded-full text-sm px-[50px] py-3 text-center block  mx-auto mt-4 ">
+        @if (isLoading) {
+            <span><i class="fas fa-spin fa-spinner"></i></span> 
+        }
+       signUp
+    
+    </button>
+    <p class=" cursor-pointer pt-3 text-gray-500">
+      Already have an account ? 
+   
+      <a routerLink='/login' routerLinkActive="router-link-active"  class=" text-[#BB7A3E] underline">Login</a>
+    </p>
+    @if (msgError) {
+        <p class=" bg-red-500 text-white px2 py-3 border">{{msgError}}</p>
+    }
+    @if (success) {
+        <p class="bg-green-500 text-white px2 py-3 border">{{success}}</p>
+    }
+    
+  </div>
+
+</form>
+  </div>
+</section>
+
+
+
+
+
+

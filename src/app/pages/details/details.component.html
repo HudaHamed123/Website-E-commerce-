@@ -1,0 +1,68 @@
+<section class="px-4 sm:px-6 lg:px-12 py-20">
+  <h2 class=" text-4xl  text-gray-600 text-center py-6">More Details about product</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 bg-white border border-[#BB7A3E]/50 mx-auto w-full max-w-6xl dark:border-[#BB7A3E]/50 dark:bg-gray-800 rounded-lg shadow-xl dark:hover:bg-gray-700 overflow-hidden">
+    
+    <div class="flex justify-center p-4 sm:p-6">
+      <owl-carousel-o [options]="customOptions" class="w-full max-w-md">
+        <ng-container *ngFor="let image of productDetails.images">
+          <ng-template carouselSlide>
+            <img [src]="image" alt="Product Image" class="w-full h-80 object-cover rounded-lg">
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+
+    <div class="flex flex-col justify-center p-4 sm:p-6 text-center md:text-start">
+      <h4 class="text-[#BB7A3E] font-serif text-lg sm:text-xl pb-2 sm:pb-3 capitalize">
+        {{ productDetails.title }}
+      </h4>
+      <p class="text-gray-700 text-sm sm:text-base pb-3">
+        {{ productDetails.description }}
+      </p>
+      <h4 class="text-[#BB7A3E] font-serif text-sm sm:text-base pb-3 capitalize">
+        {{ productDetails.category.name }}
+      </h4>
+
+      <div *ngIf="isFashionProduct" class="mt-4">
+        <span class="text-[#BB7A3E] text-lg sm:text-xl font-bold">Size: 
+          <span *ngIf="selectedSize" class="text-gray-600">{{ selectedSize }}</span>
+        </span>
+        <div class="flex gap-3 mt-2">
+          <ng-container *ngFor="let size of availableSizes">
+            <button (click)="selectSize(size)"
+                    [class.bg-[#BB7A3E]]="selectedSize === size"
+                    [class.text-white]="selectedSize === size"
+                    class="px-4 py-2 border border-[#BB7A3E] text-[#BB7A3E] rounded-lg hover:bg-[#BB7A3E] hover:text-white">
+              {{ size }}
+            </button>
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="mt-2">
+        <span class="text-[#BB7A3E] text-lg sm:text-xl font-bold">
+          {{ productDetails.price | currency: 'EUR' }}
+        </span>
+        <div class="flex items-center  mt-2 ">
+          <ng-container *ngFor="let star of getFullStars(productDetails.ratingsAverage)">
+            <i class="fas fa-star text-yellow-400"></i>
+          </ng-container>
+          <ng-container *ngIf="hasHalfStar(productDetails.ratingsAverage)">
+            <i class="fas fa-star-half-alt text-yellow-400"></i>
+          </ng-container>
+          <ng-container *ngFor="let star of getEmptyStars(productDetails.ratingsAverage)">
+            <i class="far fa-star text-yellow-400"></i>
+          </ng-container>
+          <span class="pl-1 text-sm">{{ productDetails.ratingsAverage }}</span>
+        </div>
+      </div>
+
+      <button (click)="addToCart(productId)" 
+              class="text-white border border-[#BB7A3E] bg-[#BB7A3E] hover:bg-white hover:text-[#BB7A3E] 
+                     focus:ring-1 focus:ring-[#dc7632] font-medium rounded-lg text-md py-2 px-5 mt-5 w-[70%] 
+                     sm:w-[50%] mx-auto md:mx-0">
+        <i class="fas fa-cart-shopping px-2 text-lg sm:text-xl"></i> Add To Cart
+      </button>
+    </div>
+  </div>
+</section>
